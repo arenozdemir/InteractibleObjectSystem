@@ -1,16 +1,17 @@
 using UnityEngine;
+using System;
 
 public class Book : MonoBehaviour, InteractableObjectsInterface
 {
-    private void Awake()
+    public event Action OnPlayerTriggered;
+    public void NotifyInteractableObjects()
     {
-        ObserverManager.Instance.AddInteractibleObject(this);
-    }
-    public void NotifyInteractableObjects(PlayerActionsEnum action, string objectName)
-    {
-        if (action == PlayerActionsEnum.Interact && objectName == gameObject.name)
-        {
             Debug.Log("Book: NotifyInteractableObjects");
-        }
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            OnPlayerTriggered?.Invoke();
     }
 }

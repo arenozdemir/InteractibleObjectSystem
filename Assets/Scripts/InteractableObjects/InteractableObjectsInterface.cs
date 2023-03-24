@@ -3,5 +3,5 @@ using UnityEngine;
 
 public interface InteractableObjectsInterface
 {
-    public void NotifyInteractableObjects(PlayerActionsEnum action, string objectName);
+    public void NotifyInteractableObjects();
 }

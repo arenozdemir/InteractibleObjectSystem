@@ -14,22 +14,18 @@ public class PlayerScript : ObserverManager
     private InputManager playerInput;
     
     private bool isInteracted;
+    [SerializeField] LayerMask groundLayer;
     private void Awake()
     {
         playerInput = new InputManager();
         playerNavMeshAgent = GetComponent<NavMeshAgent>();
 
         playerInput.FindAction("Interact").started += Interact;
-        playerInput.FindAction("Interact").performed += Interact;
-        playerInput.FindAction("Interact").canceled += Interact;
     }
-
-    // Update is called once per frame
     void Update()
     {
         MoveToPosition();
         RotatePlayer();
-        EnvironmentDetecting();
     }
     #region moving
     private void MoveToPosition()
@@ -38,7 +34,7 @@ public class PlayerScript : ObserverManager
         {
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit,Mathf.Infinity,groundLayer))
             {
                 playerNavMeshAgent.SetDestination(hit.point);
             }
@@ -58,21 +54,18 @@ public class PlayerScript : ObserverManager
     #region Interact
     private void Interact(InputAction.CallbackContext context)
     {
-        isInteracted = context.performed || context.started;
+        EnvironmentDetecting();
     }
     private void EnvironmentDetecting()
     {
-        if (isInteracted)
-        {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position + Vector3.up, interactRange);
             foreach (var hitCollider in hitColliders)
             {
-                if (hitCollider.CompareTag("Interactable"))
+                if (hitCollider.TryGetComponent(out InteractableObjectsInterface interactable))
                 {
-                    NotifyInteractableObjects(PlayerActionsEnum.Interact, hitCollider.name);
+                interactable.NotifyInteractableObjects();
                 }
             }
-        }
     }
     private void OnDrawGizmos()
     {
