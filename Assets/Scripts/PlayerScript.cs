@@ -1,12 +1,14 @@
 using Newtonsoft.Json.Bson;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
-public class PlayerScript : ObserverManager
+public class PlayerScript : MonoBehaviour
 {
+    [SerializeField] GameObject testObje;
     [SerializeField]
     [Range(0, 2)] private float interactRange = 1f;
     
@@ -63,7 +65,7 @@ public class PlayerScript : ObserverManager
             {
                 if (hitCollider.TryGetComponent(out InteractableObjectsInterface interactable))
                 {
-                interactable.NotifyInteractableObjects();
+                    interactable.NotifyInteractableObjects();
                 }
             }
     }
@@ -81,4 +83,9 @@ public class PlayerScript : ObserverManager
     {
         playerInput.Disable();
     }
+    public void SetTestObject(GameObject testObject) 
+    {
+        testObje = testObject;
+    }
+    public GameObject GetTestObject() => testObje;
 }

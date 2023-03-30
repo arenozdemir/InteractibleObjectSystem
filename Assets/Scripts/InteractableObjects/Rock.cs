@@ -7,6 +7,5 @@ public class Rock : MonoBehaviour, InteractableObjectsInterface
     public void NotifyInteractableObjects()
     {
             Debug.Log("Rock: NotifyInteractableObjects");
-       
     }
 }
