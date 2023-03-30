@@ -8,7 +8,8 @@ using UnityEngine.AI;
 using UnityEngine.InputSystem;
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] GameObject testObje;
+    [SerializeField] GameObject testObject;
+    
     [SerializeField]
     [Range(0, 2)] private float interactRange = 1f;
     
@@ -85,7 +86,12 @@ public class PlayerScript : MonoBehaviour
     }
     public void SetTestObject(GameObject testObject) 
     {
-        testObje = testObject;
+        if (this.testObject != null)
+        {
+            this.testObject.SetActive(true);
+        }
+        this.testObject = testObject;
+        testObject.SetActive(false);
     }
-    public GameObject GetTestObject() => testObje;
+    public GameObject GetTestObject() => testObject;
 }

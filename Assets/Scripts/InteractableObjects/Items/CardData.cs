@@ -5,12 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class CardData : ScriptableObject
 {
-    public enum TypeOfCard
-    {
-        Key,
-        Note,
-        Book,
-        Image,
-        Door
+    public enum TypeOfCard{
+        VIPcard,
+        LABcard
     }
+    public TypeOfCard typeOfCard;
 }

@@ -1,17 +1,12 @@
 using System;
 using UnityEngine;
 
-public class KeyCard : MonoBehaviour,InteractableObjectsInterface
+public class KeyCard : ITakeable, InteractableObjectsInterface
 {
-    //public event Action OnPlayerTriggered;
+    public CardData cardData;
     public void NotifyInteractableObjects()
     {
         Debug.Log("KeyCard: NotifyInteractableObjects");
+        ObjectControl();
     }
-    /*private void OnTriggerEnter(Collider other)
-    {
-        bu kýsým UI çalýþmasý için
-        if (other.gameObject.CompareTag("Player"))
-            OnPlayerTriggered?.Invoke();
-    }*/
 }
