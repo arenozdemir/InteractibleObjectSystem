@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] GameObject testObject;
     
     [SerializeField]
-    [Range(0, 2)] private float interactRange = 1f;
+    [Range(0, 15)] private float interactRange = 1f;
     
     NavMeshAgent playerNavMeshAgent;
     private InputManager playerInput;
