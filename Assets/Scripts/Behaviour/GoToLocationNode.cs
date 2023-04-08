@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static VIPBehaviour;
-using UnityEngine.EventSystems;
 
-public class GoToBar : Leaf
+public class GoToLocationNode : Leaf
 {
-    [SerializeField] GameObject bar;
-    [SerializeField] VIPBehaviour vipBehaviour;
+    [SerializeField] Transform target;
+
+    private VIPBehaviour vipBehaviour;
+    private void OnEnable()
+    {
+        vipBehaviour = GetComponentInParent<VIPBehaviour>();
+    }
     public override Status Process()
     {
-        Node.Status status = GoToLocation(bar.transform.position);
+        Node.Status status = GoToLocation(target.position);
         return status;
     }
     Node.Status GoToLocation(Vector3 destination)
     {
-        float distanceToTarget = Vector3.Distance(transform.position, destination);
+        float distanceToTarget = Vector3.Distance(vipBehaviour.transform.position, destination);
         if (vipBehaviour.state == ActionState.IDLE)
         {
             vipBehaviour.agent.SetDestination(destination);

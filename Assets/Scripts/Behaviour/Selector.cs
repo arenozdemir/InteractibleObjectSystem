@@ -8,7 +8,6 @@ public class Selector : Node
     public override Status Process()
     {
         Status childStatus = children[currentChild].Process();
-        Debug.Log("Child : " + children[currentChild].namee);
         if (childStatus == Status.SUCCESS)
         {
         //    Debug.Log("Selector: success");

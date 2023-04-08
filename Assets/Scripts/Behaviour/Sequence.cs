@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sequence : Node
 {
+
     public override Status Process()
     {
         //while (currentChild < children.Count)
