@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -370,7 +370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &640537447
 Transform:
   m_ObjectHideFlags: 0
@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853d7b0c881f1644e9a59ee4577b5cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namee: 
   status: 0
   children:
   - {fileID: 1241063345}
@@ -573,6 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6811d1af589e214fb675c2ca75e56e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namee: 
   status: 0
   children:
   - {fileID: 1228067749}
@@ -900,6 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb939391913a1b40b03c87c6dd3e1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namee: 
   status: 2
   children: []
   currentChild: 0
@@ -948,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb08121ff5510824f913e7e906bb13d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namee: 
   status: 2
   children: []
   currentChild: 0
@@ -1199,6 +1203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc7eafa4168b154c8344ca0560dcabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namee: 
   status: 2
   children: []
   currentChild: 0
@@ -1231,6 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 332c1d6b70b76cf41bfd2f6e2cbe564d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namee: 
   status: 2
   children: []
   currentChild: 0
@@ -1295,7 +1301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335839ce7040aad479edba2038fd3110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 0
+  namee: 
+  status: 2
   children: []
   currentChild: 0
   security: {fileID: 2050011638}
@@ -1466,8 +1473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050011638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.84, y: 0.5, z: -12.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12.84, y: 0, z: -12.75}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1519,6 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853d7b0c881f1644e9a59ee4577b5cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namee: 
   status: 2
   children:
   - {fileID: 1452788350}

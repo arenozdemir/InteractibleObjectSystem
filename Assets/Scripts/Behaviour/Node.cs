@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
+    public string namee;
     public enum Status{
         SUCCESS,
         FAILURE,
