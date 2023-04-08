@@ -7,7 +7,8 @@ public class CardData : ScriptableObject
 {
     public enum TypeOfCard{
         VIPcard,
-        LABcard
+        LABcard,
+        YunusunKartý
     }
     public TypeOfCard typeOfCard;
 }
