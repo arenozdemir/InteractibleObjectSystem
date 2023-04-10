@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559302082973633247}
-  - component: {fileID: 1559302082973633246}
   m_Layer: 0
   m_Name: HasCard ?
   m_TagString: Untagged
@@ -34,20 +33,6 @@ Transform:
   m_Father: {fileID: 1559302083425822614}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1559302082973633246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559302082973633245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6811d1af589e214fb675c2ca75e56e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  status: 0
-  currentChild: 0
 --- !u!1 &1559302083425822612
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +64,6 @@ Transform:
   m_Children:
   - {fileID: 1559302083822988099}
   - {fileID: 1559302082973633247}
-  - {fileID: 1559302084462913873}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,7 +80,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 0
-  currentChild: 0
 --- !u!1 &1559302083703045773
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +91,7 @@ GameObject:
   - component: {fileID: 1559302083703045772}
   - component: {fileID: 1559302083703045775}
   m_Layer: 0
-  m_Name: CardNotOkay
+  m_Name: LookForCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 2
-  currentChild: 0
 --- !u!1 &1559302083809666901
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559302083809666903}
-  - component: {fileID: 1559302083809666900}
+  - component: {fileID: 7082342224981699742}
   m_Layer: 0
   m_Name: CardOkay
   m_TagString: Untagged
@@ -171,11 +153,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 427007550576036607}
+  - {fileID: 1559302084462913873}
   m_Father: {fileID: 1559302082973633247}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1559302083809666900
+--- !u!114 &7082342224981699742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,12 +168,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1559302083809666901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bb939391913a1b40b03c87c6dd3e1fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 853d7b0c881f1644e9a59ee4577b5cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 2
-  currentChild: 0
-  card: {fileID: 0}
+  status: 0
 --- !u!1 &1559302083822988097
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 2
-  currentChild: 0
   target: {fileID: 0}
 --- !u!1 &1559302084113128348
 GameObject:
@@ -248,7 +229,7 @@ GameObject:
   - component: {fileID: 1559302084113128351}
   - component: {fileID: 1559302084113128350}
   m_Layer: 0
-  m_Name: 2.Sequence ->
+  m_Name: CardNotOkay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,13 +242,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559302084113128348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1559302083703045772}
   - {fileID: 1559302084220698075}
+  - {fileID: 2675851476953151828}
   m_Father: {fileID: 1559302082973633247}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -284,7 +266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 2
-  currentChild: 0
 --- !u!1 &1559302084220698072
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 2
-  currentChild: 0
   target: {fileID: 0}
 --- !u!1 &1559302084462913903
 GameObject:
@@ -356,13 +336,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559302084462913903}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1559302083425822614}
-  m_RootOrder: 2
+  m_Father: {fileID: 1559302083809666903}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1559302084462913872
 MonoBehaviour:
@@ -377,5 +357,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 2
-  currentChild: 0
   target: {fileID: 0}
+--- !u!1 &7777313944730532631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427007550576036607}
+  m_Layer: 0
+  m_Name: ShowCard (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &427007550576036607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777313944730532631}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1559302083809666903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8158206261754331939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2675851476953151828}
+  m_Layer: 0
+  m_Name: TalkToSecurity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2675851476953151828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8158206261754331939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1559302084113128351}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -22,10 +22,6 @@ public class VIPBehaviour : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
-    private void Start()
-    {
-        
-    }
     void Update()
     {
         if (treeStatus != Node.Status.SUCCESS)
